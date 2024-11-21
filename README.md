@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# E-commerce Application  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objective  
+Build a React TypeScript e-commerce platform that provides users with an intuitive shopping experience. The application includes essential features such as account management, product browsing, a shopping cart, and a secure checkout process.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Documentation  
 
-## Expanding the ESLint configuration
+### Setup Instructions  
+Follow the steps below to set up and run the project locally after cloning it from GitHub:  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the Repository**  
+   Use the following command to clone the project to your local machine:  
+   ```bash  
+   git clone [repository URL]  
+   cd [project directory]  
 
-- Configure the top-level `parserOptions` property like this:
+2. **Install Dependencies**
+Ensure you have Node.js installed, then run the following command to install all required dependencies:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+bash
+Copy code
+npm install  
+Configure Environment Variables
+The project requires specific Firebase and Stripe keys to function.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+A file named env.md is provided, which contains the required environment variables.
+Create a .env file in the root directory of the project and copy the following keys into it, replacing the placeholder values with your actual Firebase and Stripe keys:
+env
+Copy code
+VITE_API_KEY=---------------------  
+VITE_AUTH_DOMAIN=--------------------------  
+VITE_PROJECT_ID=--------------------------  
+VITE_STORAGE_BUCKET=-------------------------  
+VITE_MESSAGING_SENDER_ID=-------------------------  
+VITE_APP_ID=-------------------------  
+VITE_MEASUREMENT_ID=-------------------------  
+VITE_STRIPE_PUBLISH_KEY=-------------------------  
+Start the Development Server
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3.**Run the following command to start the application:**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm run dev  
+The application will be accessible at http://localhost:5173 by default.
