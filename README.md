@@ -19,10 +19,10 @@ Follow the steps below to set up and run the project locally after cloning it fr
 2. **Install Dependencies**
 Ensure you have Node.js installed, then run the following command to install all required dependencies:
 
-bash
-Copy code
+```bash
 npm install  
-Configure Environment Variables
+```
+3. **Configure Environment Variables**
 The project requires specific Firebase and Stripe keys to function.
 
 A file named env.md is provided, which contains the required environment variables.
@@ -39,7 +39,9 @@ VITE_MEASUREMENT_ID=-------------------------
 VITE_STRIPE_PUBLISH_KEY=-------------------------  
 Start the Development Server
 
-3.**Run the following command to start the application:**
+4. **Run the following command to start the application:**
 
+```bash
 npm run dev  
+```
 The application will be accessible at http://localhost:5173 by default.
